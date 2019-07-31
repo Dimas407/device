@@ -1,0 +1,434 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006b11321c, pid=6520, tid=0x0000000000002200
+#
+# JRE version: OpenJDK Runtime Environment (8.0_202-b53) (build 1.8.0_202-release-1483-b53)
+# Java VM: OpenJDK 64-Bit Server VM (25.202-b53 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x3c321c]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001dbd000):  GCTaskThread [stack: 0x0000000011b90000,0x0000000011c90000] [id=8704]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000008
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000000001eb9d578, RCX=0x0000000001dc2490, RDX=0x0000000000000001
+RSP=0x0000000011c8fbc0, RBP=0x0000000001db7710, RSI=0x0000000001da8770, RDI=0x0000000000000000
+R8 =0x000000001eb9d750, R9 =0x0000000011c8fc98, R10=0x0000000000000000, R11=0x000000001eb9d420
+R12=0x0000000001db6c60, R13=0x0000000001dbd210, R14=0x0000000000000000, R15=0x0000000001dbd5f8
+RIP=0x000000006b11321c, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x0000000011c8fbc0)
+0x0000000011c8fbc0:   0000000001da8770 000000001eb9d420
+0x0000000011c8fbd0:   000b28610000ea1f 000000006b127716
+0x0000000011c8fbe0:   0000000100017198 0000000000000000
+0x0000000011c8fbf0:   0000000001db7710 00000001000176b0
+0x0000000011c8fc00:   000b28610000ea1f 000b28620000ea1f
+0x0000000011c8fc10:   0000000001db77a8 000aa4e50000bd9a
+0x0000000011c8fc20:   0000000001dbd220 0000000001dbd210
+0x0000000011c8fc30:   0000000001dbd220 0000000001dbd210
+0x0000000011c8fc40:   0000000001db6c60 000000001eb9d680
+0x0000000011c8fc50:   0000000001da8770 000000006b12778b
+0x0000000011c8fc60:   000b28610000ea1f 000000001eb9d578
+0x0000000011c8fc70:   0000000001db7710 00000000d355e780
+0x0000000011c8fc80:   000000001eb9d420 000000006b125925
+0x0000000011c8fc90:   0000000012095138 00000000d355e780
+0x0000000011c8fca0:   000000001eb9d578 0000000015c6f3b8
+0x0000000011c8fcb0:   0000000000000010 0000000000000000 
+
+Instructions: (pc=0x000000006b11321c)
+0x000000006b1131fc:   cc cc cc cc 48 89 5c 24 10 48 89 6c 24 18 56 57
+0x000000006b11320c:   41 54 41 55 41 56 48 83 ec 70 45 33 f6 48 8b f9
+0x000000006b11321c:   8b 49 08 8d 04 09 4d 8b e9 49 8b e8 8b f2 45 8b
+0x000000006b11322c:   e6 85 c0 0f 84 2a 02 00 00 83 f9 02 0f 86 74 01 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x000000001eb9d578 is an unknown value
+RCX=0x0000000001dc2490 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x0000000011c8fbc0 is an unknown value
+RBP=0x0000000001db7710 is an unknown value
+RSI=0x0000000001da8770 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x000000001eb9d750 is an unknown value
+R9 =0x0000000011c8fc98 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x000000001eb9d420 is an unknown value
+R12=0x0000000001db6c60 is an unknown value
+R13=0x0000000001dbd210 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000001dbd5f8 is an unknown value
+
+
+Stack: [0x0000000011b90000,0x0000000011c90000],  sp=0x0000000011c8fbc0,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3c321c]
+V  [jvm.dll+0x3d778b]
+V  [jvm.dll+0x3d5925]
+V  [jvm.dll+0x2599d0]
+V  [jvm.dll+0x26f4da]
+C  [MSVCR100.dll+0x21d9f]
+C  [MSVCR100.dll+0x21e3b]
+C  [kernel32.dll+0x159cd]
+C  [ntdll.dll+0x2a561]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000015fdd000 JavaThread "JobScheduler FJ pool 2/3" daemon [_thread_blocked, id=7984, stack(0x000000001d150000,0x000000001d250000)]
+  0x0000000015fdc000 JavaThread "JobScheduler FJ pool 1/3" daemon [_thread_blocked, id=2688, stack(0x000000001cc50000,0x000000001cd50000)]
+  0x0000000015fdd800 JavaThread "JobScheduler FJ pool 0/3" daemon [_thread_blocked, id=8672, stack(0x000000001a440000,0x000000001a540000)]
+  0x0000000015fdf000 JavaThread "ApplicationImpl pooled thread 78" [_thread_blocked, id=7536, stack(0x000000001dc50000,0x000000001dd50000)]
+  0x00000000211e9800 JavaThread "ApplicationImpl pooled thread 77" daemon [_thread_blocked, id=188, stack(0x0000000023ea0000,0x0000000023fa0000)]
+  0x000000001a7c6000 JavaThread "ApplicationImpl pooled thread 76" daemon [_thread_blocked, id=5784, stack(0x0000000026b80000,0x0000000026c80000)]
+  0x00000000211e8000 JavaThread "ApplicationImpl pooled thread 75" [_thread_blocked, id=8268, stack(0x0000000026010000,0x0000000026110000)]
+  0x0000000017c57000 JavaThread "TimerQueue" daemon [_thread_blocked, id=8240, stack(0x000000001d750000,0x000000001d850000)]
+  0x0000000017c56800 JavaThread "Netty Builtin Server 2" [_thread_in_native, id=7876, stack(0x000000001d250000,0x000000001d350000)]
+  0x0000000017d30800 JavaThread "Batik CleanerThread" daemon [_thread_blocked, id=7220, stack(0x000000001d050000,0x000000001d150000)]
+  0x0000000017d2f800 JavaThread "MarlinRenderer Disposer" daemon [_thread_blocked, id=8328, stack(0x000000001cf50000,0x000000001d050000)]
+  0x0000000017d2c000 JavaThread "FeatureUsageFileEventLogger" daemon [_thread_blocked, id=7552, stack(0x0000000017440000,0x0000000017540000)]
+  0x0000000017d2e000 JavaThread "BaseDataReader: error stream of fsnotifier64.exe" [_thread_in_native, id=9192, stack(0x000000001bb10000,0x000000001bc10000)]
+  0x0000000017d2d800 JavaThread "BaseDataReader: output stream of fsnotifier64.exe" [_thread_blocked, id=8480, stack(0x0000000019c30000,0x0000000019d30000)]
+  0x0000000017d2c800 JavaThread "fsnotifier64.exe" [_thread_in_native, id=7456, stack(0x0000000019b30000,0x0000000019c30000)]
+  0x0000000017d2b000 JavaThread "AWT-EventQueue-0 2019.1.3#WS-191.7479.14 WebStorm, eap:false, os:Windows 7 6.1, java-version:JetBrains s.r.o 1.8.0_202-release-1483-b53" [_thread_blocked, id=3460, stack(0x000000001b810000,0x000000001b910000)]
+  0x0000000017d2a800 JavaThread "AWT-Shutdown" [_thread_blocked, id=8816, stack(0x000000001b710000,0x000000001b810000)]
+  0x0000000015ed2800 JavaThread "Periodic tasks thread" daemon [_thread_blocked, id=5880, stack(0x0000000019f40000,0x000000001a040000)]
+  0x000000001731d800 JavaThread "Netty Builtin Server 1" [_thread_in_native, id=4804, stack(0x0000000019230000,0x0000000019330000)]
+  0x0000000017220800 JavaThread "AWT-Windows" daemon [_thread_blocked, id=7836, stack(0x0000000018be0000,0x0000000018ce0000)]
+  0x0000000017282000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8360, stack(0x0000000017810000,0x0000000017910000)]
+  0x0000000015d52800 JavaThread "Service Thread" daemon [_thread_blocked, id=8728, stack(0x0000000016940000,0x0000000016a40000)]
+  0x0000000015cce000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=6616, stack(0x0000000016840000,0x0000000016940000)]
+  0x000000001536f800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8108, stack(0x0000000016740000,0x0000000016840000)]
+  0x000000001536c000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8544, stack(0x0000000016640000,0x0000000016740000)]
+  0x0000000015cc4000 JavaThread "Attach Listener" daemon [_thread_blocked, id=9012, stack(0x0000000016540000,0x0000000016640000)]
+  0x0000000015cc3000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7436, stack(0x0000000016440000,0x0000000016540000)]
+  0x0000000015cbf000 JavaThread "Surrogate Locker Thread (Concurrent GC)" daemon [_thread_blocked, id=7832, stack(0x0000000016340000,0x0000000016440000)]
+  0x0000000015357000 JavaThread "Finalizer" daemon [_thread_blocked, id=7884, stack(0x0000000016170000,0x0000000016270000)]
+  0x0000000015cb0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=8884, stack(0x0000000016070000,0x0000000016170000)]
+  0x00000000020af000 JavaThread "main" [_thread_in_native, id=5328, stack(0x0000000000030000,0x0000000000130000)]
+
+Other Threads:
+  0x0000000015349000 VMThread [stack: 0x0000000015b70000,0x0000000015c70000] [id=7848]
+  0x0000000015d58000 WatcherThread [stack: 0x0000000016a40000,0x0000000016b40000] [id=3332]
+
+=>0x0000000001dbd000 (exited) GCTaskThread [stack: 0x0000000011b90000,0x0000000011c90000] [id=8704]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000020accc0] Threads_lock - owner thread: 0x0000000015349000
+[0x00000000020ad240] Heap_lock - owner thread: 0x0000000015fdd000
+
+heap address: 0x00000000d1200000, size: 750 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ par new generation   total 39296K, used 38142K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  73% used [0x00000000d3860000, 0x00000000d3b7fa40, 0x00000000d3ca0000)
+  to   space 4352K,  67% used [0x00000000d3420000, 0x00000000d36fdb60, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 95466K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+
+Card table byte_map: [0x0000000011d90000,0x0000000011f10000] byte_map_base: 0x0000000011707000
+
+Marking Bits: (CMSBitMap*) 0x0000000001e01e38
+ Bits: [0x0000000012450000, 0x0000000012c20000)
+
+Mod Union Table: (CMSBitMap*) 0x0000000001e01ef8
+ Bits: [0x0000000000450000, 0x000000000046f400)
+
+Polling page: 0x0000000000190000
+
+CodeCache: size=245760Kb used=124757Kb max_used=124770Kb free=121002Kb
+ bounds [0x00000000026d0000, 0x000000000a190000, 0x00000000116d0000]
+ total_blobs=32824 nmethods=31627 adapters=1103
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 15500.263 Thread 0x000000001536f800 45034       4       com.intellij.psi.css.inspections.CssInvalidElementInspection::isValueForMatchingElement (36 bytes)
+Event: 15500.267 Thread 0x000000001536c000 45035       4       com.intellij.psi.css.inspections.CssInvalidElementInspection::isMatchingElement (62 bytes)
+Event: 15500.303 Thread 0x000000001536c000 nmethod 45035 0x000000000a1544d0 code [0x000000000a154700, 0x000000000a155220]
+Event: 15500.306 Thread 0x000000001536f800 nmethod 45034 0x000000000a17e990 code [0x000000000a17ec40, 0x000000000a17fb40]
+Event: 15500.314 Thread 0x0000000015cce000 45036       3       com.intellij.openapi.editor.impl.view.EditorPainter$$Lambda$1998/1905689695::accept (28 bytes)
+Event: 15500.316 Thread 0x0000000015cce000 nmethod 45036 0x00000000059743d0 code [0x00000000059745c0, 0x0000000005974f28]
+Event: 15500.316 Thread 0x0000000015cce000 45037       3       com.intellij.openapi.editor.impl.view.EditorPainter::lambda$paintHighlighterAfterEndOfLine$6 (32 bytes)
+Event: 15500.317 Thread 0x0000000015cce000 nmethod 45037 0x0000000008443910 code [0x0000000008443ae0, 0x00000000084441c8]
+Event: 15501.006 Thread 0x000000001536c000 45038       4       java.util.concurrent.ForkJoinPool::scan (416 bytes)
+Event: 15501.024 Thread 0x000000001536c000 nmethod 45038 0x0000000003df11d0 code [0x0000000003df1360, 0x0000000003df1b80]
+
+GC Heap History (10 events):
+Event: 15499.459 GC heap after
+Heap after GC invocations=2061 (full 19):
+ par new generation   total 39296K, used 2601K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  59% used [0x00000000d3860000, 0x00000000d3aea640, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 94586K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188884K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+}
+Event: 15500.011 GC heap before
+{Heap before GC invocations=2061 (full 19):
+ par new generation   total 39296K, used 37545K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  59% used [0x00000000d3860000, 0x00000000d3aea640, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 94586K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188885K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+Event: 15500.020 GC heap after
+Heap after GC invocations=2062 (full 19):
+ par new generation   total 39296K, used 3120K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  71% used [0x00000000d3420000, 0x00000000d372c200, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 133268K, used 94748K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188885K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+}
+Event: 15500.220 GC heap before
+{Heap before GC invocations=2062 (full 19):
+ par new generation   total 39296K, used 38064K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  71% used [0x00000000d3420000, 0x00000000d372c200, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 133268K, used 94748K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188885K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+Event: 15500.228 GC heap after
+Heap after GC invocations=2063 (full 19):
+ par new generation   total 39296K, used 3543K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  81% used [0x00000000d3860000, 0x00000000d3bd5f40, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 94921K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188885K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+}
+Event: 15500.547 GC heap before
+{Heap before GC invocations=2063 (full 19):
+ par new generation   total 39296K, used 38487K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  81% used [0x00000000d3860000, 0x00000000d3bd5f40, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 94921K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+Event: 15500.556 GC heap after
+Heap after GC invocations=2064 (full 19):
+ par new generation   total 39296K, used 2861K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  65% used [0x00000000d3420000, 0x00000000d36eb778, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 133268K, used 95095K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+}
+Event: 15500.926 GC heap before
+{Heap before GC invocations=2064 (full 19):
+ par new generation   total 39296K, used 37805K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  65% used [0x00000000d3420000, 0x00000000d36eb778, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 133268K, used 95095K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+Event: 15500.934 GC heap after
+Heap after GC invocations=2065 (full 19):
+ par new generation   total 39296K, used 3198K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  73% used [0x00000000d3860000, 0x00000000d3b7fa40, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 95295K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+}
+Event: 15501.296 GC heap before
+{Heap before GC invocations=2065 (full 19):
+ par new generation   total 39296K, used 38142K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  73% used [0x00000000d3860000, 0x00000000d3b7fa40, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 133268K, used 95295K [0x00000000e0c00000, 0x00000000e8e25000, 0x0000000100000000)
+ Metaspace       used 188886K, capacity 201618K, committed 201888K, reserved 1226752K
+  class space    used 22765K, capacity 25341K, committed 25436K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 15479.126 Thread 0x00000000211e8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000005e7489c method=com.intellij.lang.impl.PsiBuilderImpl$MyTreeStructure.getChildren(Ljava/lang/Object;Lcom/intellij/openapi/util/Ref;)I @ 2
+Event: 15479.126 Thread 0x00000000211e8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000000976bd98 method=com.intellij.lang.impl.PsiBuilderImpl$MyComparator.hashCodesEqual(Lcom/intellij/lang/ASTNode;Lcom/intellij/lang/LighterASTNode;)Z @ 105
+Event: 15480.919 Thread 0x000000001a7c6000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x0000000006e5fa04 method=com.intellij.psi.impl.source.tree.TreeUtil.nextLeaf(Lcom/intellij/lang/ASTNode;Z)Lcom/intellij/lang/ASTNode; @ 28
+Event: 15480.936 Thread 0x000000001a7c6000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000a0e3278 method=com.intellij.util.diff.DiffTree.build(Ljava/lang/Object;Ljava/lang/Object;ILcom/intellij/util/diff/DiffTreeChangeBuilder;)Lcom/intellij/util/diff/DiffTree$CompareResult; @ 2
+Event: 15499.229 Thread 0x00000000211e8000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000000050b4594 method=com.intellij.psi.css.impl.CssPseudoSelectorBase.getColonPrefixLength()I @ 57
+Event: 15499.229 Thread 0x00000000211e8000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000007630998 method=com.intellij.psi.css.impl.CssPseudoSelectorBase.getNameIdentifier()Lcom/intellij/psi/PsiElement; @ 9
+Event: 15499.314 Thread 0x0000000015fdc000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000005cfa120 method=com.intellij.psi.css.inspections.CssInvalidElementInspection.processElement(Lcom/intellij/psi/PsiElement;Lcom/intellij/codeInspection/ProblemsHolder;)V @ 27
+Event: 15499.380 Thread 0x0000000015fdd000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000089847c0 method=com.intellij.psi.css.impl.CssPseudoSelectorBase.getNameIdentifier()Lcom/intellij/psi/PsiElement; @ 9
+Event: 15499.380 Thread 0x0000000015fdd000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000004ca6960 method=com.intellij.psi.css.impl.CssPseudoSelectorBase.getNameIdentifier()Lcom/intellij/psi/PsiElement; @ 9
+Event: 15499.735 Thread 0x0000000015fdf000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000000050b4594 method=com.intellij.psi.css.impl.CssPseudoSelectorBase.getColonPrefixLength()I @ 57
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 15363.872 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d1b55630) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15389.499 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d2841d38) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15392.855 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d1f7fc20) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15422.158 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d24f5ec8) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15424.596 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d2e2ab68) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15443.701 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d1718bf8) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15445.305 Thread 0x0000000017d2b000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d1b51f20) thrown at [C:\BuildAgent\work\d169a5271ee8d3d2\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 15499.229 Thread 0x00000000211e8000 Implicit null exception at 0x0000000007630374 to 0x0000000007630989
+Event: 15499.380 Thread 0x0000000015fdd000 Implicit null exception at 0x0000000008983c00 to 0x00000000089847a1
+Event: 15499.380 Thread 0x0000000015fdd000 Implicit null exception at 0x0000000004ca687c to 0x0000000004ca694f
+
+Events (10 events):
+Event: 15500.258 Thread 0x0000000015cce000 flushing nmethod 0x0000000009b1eb50
+Event: 15500.300 Executing VM operation: RevokeBias
+Event: 15500.301 Executing VM operation: RevokeBias done
+Event: 15500.315 Executing VM operation: RevokeBias
+Event: 15500.316 Executing VM operation: RevokeBias done
+Event: 15500.547 Executing VM operation: GenCollectForAllocation
+Event: 15500.556 Executing VM operation: GenCollectForAllocation done
+Event: 15500.926 Executing VM operation: GenCollectForAllocation
+Event: 15500.934 Executing VM operation: GenCollectForAllocation done
+Event: 15501.296 Executing VM operation: GenCollectForAllocation
+
+
+Dynamic libraries:
+0x0000000140000000 - 0x0000000140147000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\bin\webstorm64.exe
+0x0000000077ae0000 - 0x0000000077c8a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fee46b0000 - 0x000007fee46c2000 	C:\Program Files\AVG\Antivirus\aswhook.dll
+0x00000000779c0000 - 0x0000000077adf000 	C:\Windows\system32\kernel32.dll
+0x000007fefd970000 - 0x000007fefd9da000 	C:\Windows\system32\KERNELBASE.dll
+0x00000000778c0000 - 0x00000000779ba000 	C:\Windows\system32\USER32.dll
+0x000007fefe0f0000 - 0x000007fefe157000 	C:\Windows\system32\GDI32.dll
+0x000007fefe370000 - 0x000007fefe37e000 	C:\Windows\system32\LPK.dll
+0x000007fefe630000 - 0x000007fefe6fb000 	C:\Windows\system32\USP10.dll
+0x000007fefef20000 - 0x000007fefefbf000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdb90000 - 0x000007fefdc6b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefdf40000 - 0x000007fefdf5f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe240000 - 0x000007fefe36d000 	C:\Windows\system32\RPCRT4.dll
+0x000007feff060000 - 0x000007feffdea000 	C:\Windows\system32\SHELL32.dll
+0x000007fefe380000 - 0x000007fefe3f1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe600000 - 0x000007fefe62e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefed90000 - 0x000007fefee99000 	C:\Windows\system32\MSCTF.dll
+0x000000006ad50000 - 0x000000006b596000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\server\jvm.dll
+0x000007fefa390000 - 0x000007fefa399000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefec20000 - 0x000007fefec6d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefec10000 - 0x000007fefec18000 	C:\Windows\system32\NSI.dll
+0x000007fef75c0000 - 0x000007fef75fb000 	C:\Windows\system32\WINMM.dll
+0x000007fefc860000 - 0x000007fefc86c000 	C:\Windows\system32\VERSION.dll
+0x0000000077cb0000 - 0x0000000077cb7000 	C:\Windows\system32\PSAPI.DLL
+0x000000006bd10000 - 0x000000006bde2000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\MSVCR100.dll
+0x000007fef4550000 - 0x000007fef455f000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\verify.dll
+0x000007fef4520000 - 0x000007fef4549000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\java.dll
+0x000007fef4160000 - 0x000007fef4176000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\zip.dll
+0x000007fefe400000 - 0x000007fefe5fc000 	C:\Windows\system32\ole32.dll
+0x000007fefd7d0000 - 0x000007fefd7df000 	C:\Windows\system32\profapi.dll
+0x000007fef4130000 - 0x000007fef4154000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\sunec.dll
+0x000007fece4f0000 - 0x000007fece68c000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\awt.dll
+0x000007fefb990000 - 0x000007fefb9a8000 	C:\Windows\system32\dwmapi.dll
+0x000007fefe160000 - 0x000007fefe23a000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fece120000 - 0x000007fece4e4000 	C:\Windows\system32\d2d1.dll
+0x000007fef5a10000 - 0x000007fef5ab0000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_a4d981ff711297b6\COMCTL32.dll
+0x000007fefc3c0000 - 0x000007fefc416000 	C:\Windows\system32\uxtheme.dll
+0x000007fefd670000 - 0x000007fefd67f000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fef4110000 - 0x000007fef412a000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\net.dll
+0x000007fefcfa0000 - 0x000007fefcff5000 	C:\Windows\system32\mswsock.dll
+0x000007fefcf90000 - 0x000007fefcf97000 	C:\Windows\System32\wship6.dll
+0x000007fee71d0000 - 0x000007fee71e1000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\nio.dll
+0x000007fefc980000 - 0x000007fefc987000 	C:\Windows\System32\wshtcpip.dll
+0x000007fefd000000 - 0x000007fefd018000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefcd00000 - 0x000007fefcd47000 	C:\Windows\system32\rsaenh.dll
+0x000007fefdb60000 - 0x000007fefdb7f000 	C:\Windows\system32\USERENV.dll
+0x000007fefaef0000 - 0x000007fefaf17000 	C:\Windows\system32\IPHLPAPI.DLL
+0x000007fefaee0000 - 0x000007fefaeeb000 	C:\Windows\system32\WINNSI.DLL
+0x000007fefacf0000 - 0x000007fefad08000 	C:\Windows\system32\dhcpcsvc.DLL
+0x000007fefacd0000 - 0x000007feface1000 	C:\Windows\system32\dhcpcsvc6.DLL
+0x000007fefae00000 - 0x000007fefae0d000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\management.dll
+0x000007fee6050000 - 0x000007fee6092000 	C:\Users\Дмитрий\.WebStorm2019.1\system\tmp\jna1786475008139040753.dll
+0x000007fef4370000 - 0x000007fef4373000 	C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+0x000007fee71b0000 - 0x000007fee71cb000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\bin\IdeaWin64.dll
+0x000007fed8960000 - 0x000007fed89f2000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\freetype.dll
+0x000007fed88b0000 - 0x000007fed8953000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\fontmanager.dll
+0x000007fef71d0000 - 0x000007fef72ed000 	C:\Windows\system32\opengl32.dll
+0x000007fef71a0000 - 0x000007fef71cd000 	C:\Windows\system32\GLU32.dll
+0x000007fef5d00000 - 0x000007fef5df1000 	C:\Windows\system32\DDRAW.dll
+0x000007fefa170000 - 0x000007fefa178000 	C:\Windows\system32\DCIMAN32.dll
+0x000007fefe700000 - 0x000007fefe8d7000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd860000 - 0x000007fefd896000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefd950000 - 0x000007fefd96a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fee5fc0000 - 0x000007fee5ff9000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\splashscreen.dll
+0x000007fef4510000 - 0x000007fef4517000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\jawt.dll
+0x000007fefd610000 - 0x000007fefd667000 	C:\Windows\system32\apphelp.dll
+0x000007fefecf0000 - 0x000007fefed89000 	C:\Windows\system32\CLBCatQ.DLL
+0x000007fefbd80000 - 0x000007fefbf74000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.23403_none_e36ad4593102f066\comctl32.dll
+0x000007fefb7e0000 - 0x000007fefb941000 	C:\Windows\system32\WindowsCodecs.dll
+0x000007fef99d0000 - 0x000007fef9a05000 	C:\Windows\system32\EhStorShell.dll
+0x000007fefc490000 - 0x000007fefc5bc000 	C:\Windows\system32\PROPSYS.dll
+0x000007fef9950000 - 0x000007fef99ce000 	C:\Windows\System32\cscui.dll
+0x000007fef9940000 - 0x000007fef994c000 	C:\Windows\System32\CSCDLL.dll
+0x000007fef9930000 - 0x000007fef993f000 	C:\Windows\system32\CSCAPI.dll
+0x000007fef98b0000 - 0x000007fef9930000 	C:\Windows\system32\ntshrui.dll
+0x000007fefd2a0000 - 0x000007fefd2c3000 	C:\Windows\system32\srvcli.dll
+0x000007fefaf80000 - 0x000007fefaf8b000 	C:\Windows\system32\slc.dll
+0x000007fef4100000 - 0x000007fef410b000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\sunmscapi.dll
+0x000007fefd9f0000 - 0x000007fefdb5d000 	C:\Windows\system32\CRYPT32.dll
+0x000007fefd7e0000 - 0x000007fefd7ef000 	C:\Windows\system32\MSASN1.dll
+0x000007fefb020000 - 0x000007fefb035000 	C:\Windows\system32\NLAapi.dll
+0x000007fef4d00000 - 0x000007fef4d15000 	C:\Windows\system32\napinsp.dll
+0x000007fef4ce0000 - 0x000007fef4cf9000 	C:\Windows\system32\pnrpnsp.dll
+0x000007fefce20000 - 0x000007fefce7b000 	C:\Windows\system32\DNSAPI.dll
+0x000007fef42a0000 - 0x000007fef42ab000 	C:\Windows\System32\winrnr.dll
+0x000007fef4290000 - 0x000007fef42a0000 	C:\Windows\system32\wshbth.dll
+0x0000000075410000 - 0x0000000075436000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fefad90000 - 0x000007fefade3000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fefba50000 - 0x000007fefba58000 	C:\Windows\system32\rasadhlp.dll
+0x0000000180000000 - 0x0000000180069000 	C:\Program Files\Elantech\ETDApix.dll
+0x000007fefa0f0000 - 0x000007fefa161000 	C:\Windows\system32\WINSPOOL.DRV
+0x000007fed5e80000 - 0x000007fed5ebe000 	C:\Program Files\JetBrains\WebStorm 2019.1.3\jre64\bin\lcms.dll
+0x000007fef8b10000 - 0x000007fef8c35000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -Djdk.http.auth.tunneling.disabledSchemes="" -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djb.vmOptionsFile=C:\Program Files\JetBrains\WebStorm 2019.1.3\bin\webstorm64.exe.vmoptions -Didea.platform.prefix=WebStorm -Dide.native.launcher=true -Didea.paths.selector=WebStorm2019.1 -XX:ErrorFile=C:\Users\<8B@89\java_error_in_webstorm_%p.log -XX:HeapDumpPath=C:\Users\<8B@89\java_error_in_webstorm.hprof 
+java_command: <unknown>
+java_class_path (initial): C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\bootstrap.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\extensions.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\util.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\jdom.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\log4j.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\trove4j.jar;C:\Program Files\JetBrains\WebStorm 2019.1.3\lib\jna.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;
+USERNAME=Дмитрий
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 18 Model 1 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23915)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 18 model 1 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 7842372k(1331484k free), swap 15682884k(6884208k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.202-b53) for windows-amd64 JRE (1.8.0_202-release-1483-b53), built on Apr 25 2019 15:49:55 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Tue Jul 16 21:57:48 2019
+timezone: Романское время (зима)
+elapsed time: 15501 seconds (0d 4h 18m 21s)
+
